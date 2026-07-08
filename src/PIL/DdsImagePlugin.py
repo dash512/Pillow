@@ -418,11 +418,11 @@ class DdsImageFile(ImageFile.ImageFile):
                     self._mode = "RGBA"
                     self.pixel_format = "BC1"
                     n = 1
-                elif dxgi_format in (DXGI_FORMAT.BC2_TYPELESS, DXGI_FORMAT.BC2_UNORM):
+                elif dxgi_format in (DXGI_FORMAT.BC2_TYPELESS, DXGI_FORMAT.BC2_UNORM, DXGI_FORMAT.BC2_UNORM_SRGB):
                     self._mode = "RGBA"
                     self.pixel_format = "BC2"
                     n = 2
-                elif dxgi_format in (DXGI_FORMAT.BC3_TYPELESS, DXGI_FORMAT.BC3_UNORM):
+                elif dxgi_format in (DXGI_FORMAT.BC3_TYPELESS, DXGI_FORMAT.BC3_UNORM, DXGI_FORMAT.BC3_UNORM_SRGB):
                     self._mode = "RGBA"
                     self.pixel_format = "BC3"
                     n = 3
